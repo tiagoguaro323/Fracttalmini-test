@@ -10,6 +10,7 @@ export default defineConfig({
   federation({
     filename: 'remoteEntry.js',
     name: 'remote',
+    library: { type: 'var', name: 'remote' }, // 👈 clave
     exposes: {
       './remote-app': './src/App.tsx',
     },
